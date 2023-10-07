@@ -1,5 +1,7 @@
 import React from "react";
-import WaterAvailabilityChart from "./components/LineChart";
+
+import OceanWarmingChart from "../components/OceanWarmingChart";
+import Navigation from "../components/Navigation";
 
 const Conclusion = () => {
   return (
@@ -41,13 +43,23 @@ const ChartInteractivity = () => {
     </section>
   );
 };
-export default function WaterLineChartMain() {
+export default function OceanWarmingPage() {
+  const nextSectionLink = "../charts/global";
+  const getScreenWidth = () => window.innerWidth;
+  const widthClass = getScreenWidth() < 640 ? "" : "w-3/4";
   return (
-    <div className="">
-      <WaterAvailabilityChart />
-      <ChartExplanation />
-      <ChartInteractivity />
-      <Conclusion />
+    <div>
+      <div className="min-h-screen ">
+        <main className={`flex flex-col items-center  min-h-screen`}>
+          <div className={`bg-gray-200 p-4 mt-5 rounded-lg ${widthClass}`}>
+            <OceanWarmingChart />
+            <ChartExplanation />
+            <ChartInteractivity />
+            <Conclusion />
+            <Navigation nextSectionLink={nextSectionLink} />
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

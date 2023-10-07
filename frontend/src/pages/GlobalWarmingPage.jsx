@@ -1,7 +1,12 @@
 import React from "react";
-import WaterAvailabilityChart from "./components/LineChart";
+
+import OceanWarmingChart from "../components/OceanWarmingChart";
+import Navigation from "../components/Navigation";
+import GlobalWarmingChart from "../components/GlobalWarmingChart";
 
 const Conclusion = () => {
+  const nextSectionLink = "/section3";
+
   return (
     <section className="text-center my-8">
       <h2 className="text-2xl font-semibold mb-4">Conclusion and Takeaways</h2>
@@ -41,13 +46,23 @@ const ChartInteractivity = () => {
     </section>
   );
 };
-export default function WaterLineChartMain() {
+export default function GlobalWarmingPage() {
+  const nextSectionLink = "../charts/water";
+  const getScreenWidth = () => window.innerWidth;
+  const widthClass = getScreenWidth() < 640 ? "" : "w-3/4";
   return (
-    <div className="">
-      <WaterAvailabilityChart />
-      <ChartExplanation />
-      <ChartInteractivity />
-      <Conclusion />
+    <div>
+      <div className="min-h-screen ">
+        <main className={`flex flex-col items-center  min-h-screen`}>
+          <div className={`bg-gray-200 p-4 mt-5 rounded-lg ${widthClass}`}>
+            <GlobalWarmingChart />
+            <ChartExplanation />
+            <ChartInteractivity />
+            <Conclusion />
+            <Navigation nextSectionLink={nextSectionLink} />
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
