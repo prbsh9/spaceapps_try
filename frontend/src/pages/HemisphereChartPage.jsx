@@ -32,6 +32,10 @@ const OceanWarmingChart = () => {
           src={process.env.PUBLIC_URL + "/ocean_warming_over_time.png"}
           alt="Your Image"
         />
+        <p>
+          *Note:This is done through dummy data since we did not find this type
+          of data which we were planning to use ML models etc on.
+        </p>
       </section>
       <Navigation nextSectionLink={nextSectionLink} />
     </div>

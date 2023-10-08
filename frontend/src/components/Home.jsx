@@ -17,7 +17,7 @@ export default function Home() {
       </div>
 
       {/* Section 3: Water Cycle Explanation */}
-      <div className=" rounded-lg shadow-md bg-gray-800 text-gray-300">
+      <div className=" rounded-lg shadow-md bg-gray-800 p-3 text-gray-300">
         <h2 className="text-3xl font-bold text-blue-500">
           Understanding the Water Cycle
         </h2>

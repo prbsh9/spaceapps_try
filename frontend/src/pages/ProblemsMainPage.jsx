@@ -1,8 +1,6 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 
-function ImageComponent({}) {}
-
 const ProblemsMainPage = () => {
   const nextSectionLink = "/data_analysis";
 

@@ -57,16 +57,18 @@ export default function NavigateToPages() {
             </ul>
           </li>
           <li>
-            <Link
-              to="/action_and_implications"
-              className="text-blue-500 hover:underline "
-            >
+            <Link to="/section3" className="text-blue-500 hover:underline ">
               Section 4: Implications, Call to Action, and Conclusion
             </Link>
           </li>
           <li className="my-2">
             <Link to="/fitting" className="text-blue-500 hover:underline">
               Section 5: Fitting the Global Temperature with Linear Regression
+            </Link>
+          </li>
+          <li className="my-2">
+            <Link to="/models" className="text-blue-500 hover:underline">
+              Section 5: Mathematical Model
             </Link>
           </li>
         </ul>

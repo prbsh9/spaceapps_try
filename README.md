@@ -1,13 +1,10 @@
 # Everything Starts with Water
 
-![Project Screenshot](link_to_project_screenshot.png)
-
 ## Table of Contents
 
 - [Everything Starts with Water](#everything-starts-with-water)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
-  - [Project Objectives](#project-objectives)
     - [Key Objectives](#key-objectives)
   - [Technologies Used](#technologies-used)
   - [Folder Structure:](#folder-structure)
@@ -16,8 +13,6 @@
 ## Overview
 
 **Everything Starts with Water** is an educational and interactive web application created for the NASA SpaceApps Hackathon 2023. This project aims to help elementary, middle, and high school students understand the complete path of water across the Earth's entire system and how it's influenced by our changing climate. The application utilizes data from NASA satellites to create engaging visualizations and narratives about the global water cycle.
-
-## Project Objectives
 
 ### Key Objectives
 

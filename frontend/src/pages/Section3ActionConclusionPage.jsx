@@ -38,6 +38,54 @@ const Section3 = () => {
           take steps to reduce our carbon footprint, conserve water, and support
           policies that promote sustainability.
         </p>
+        Some examples of actions we can take include:
+        <ol className="text-left list-decimal px-8 flex flex-col gap-4">
+          <li>
+            We Should try to save water by preventing excess use during routine
+            tasks.
+            <img
+              className=""
+              src={process.env.PUBLIC_URL + "/save_water.png"}
+              alt="Global Warming"
+            />
+          </li>
+          <li>
+            We should promote clean energy sources over fossil fuels since
+            carbon emission is a major cause for global warming.
+            <img
+              className="my-7"
+              src={process.env.PUBLIC_URL + "/our_future.png"}
+              alt="Global Warming"
+            />
+          </li>
+          <li>
+            We should plant trees and formulate strict rules against
+            deforestation.
+            <img
+              className="my-7"
+              src={process.env.PUBLIC_URL + "/plant.jpg"}
+              alt="Global Warming"
+            />
+          </li>
+          <li>
+            Government should impose strict rules and regulations for those who
+            pollute freshwater resources by sewage and garbage.
+            <img
+              src="https://www.americanrivers.org/wp-content/uploads/2023/01/gowanus-canal_credit-american-rivers.jpeg
+          "
+              alt="Global Warming"
+            />
+          </li>
+          <li>
+            We shouldn’t block land surfaces by tiles or cementing as it
+            disturbs natural processes of underground rain water harvesting.
+            <img
+              className="my-7"
+              src={process.env.PUBLIC_URL + "/land_surface.jpg"}
+              alt="Global Warming"
+            />
+          </li>
+        </ol>
       </div>
 
       {/* Conclusion */}

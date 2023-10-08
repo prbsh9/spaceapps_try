@@ -33,6 +33,10 @@ const OceanWarmingChart = () => {
           src={process.env.PUBLIC_URL + "/ocean_warming_over_time.png"}
           alt="Your Image"
         />
+        <p>
+          *Note: The data is plotted in python since we did all analysis and
+          regression fitting with python but another plot is done through JS.
+        </p>
       </section>
     </div>
   );

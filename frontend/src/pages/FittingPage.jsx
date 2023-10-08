@@ -111,6 +111,7 @@ const ChartExplanation = () => {
 };
 
 export default function FittingPage() {
+  const nextSectionLink = "/models";
   const getScreenWidth = () => window.innerWidth;
   const widthClass = getScreenWidth() < 640 ? "" : "w-3/4";
   return (
@@ -120,6 +121,7 @@ export default function FittingPage() {
           <div className={`bg-gray-200 p-4 mt-5 rounded-lg ${widthClass}`}>
             <FittingChart />
             <ChartExplanation />
+            <Navigation nextSectionLink={nextSectionLink} />
           </div>
         </main>
       </div>

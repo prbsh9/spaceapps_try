@@ -9,7 +9,7 @@ const ChartExplanation = () => {
     <section className="text-center my-8">
       <h2 className="text-2xl font-semibold mb-4">Understanding the Chart</h2>
       <p className="text-lg">
-        <ul className="flex flex-col gap-2 text-justify">
+        <ul className="flex flex-col gap-2 list-disc px-6 text-justify">
           <li>
             The temperature anomaly is a measure of how much the global surface
             temperature deviates from this reference period.
@@ -24,7 +24,6 @@ const ChartExplanation = () => {
             year on record since recordkeeping began in 1880, as reported by
             NASA's Goddard Institute for Space Studies (GISS).
           </li>
-          <li></li>
         </ul>
       </p>
     </section>
@@ -35,19 +34,19 @@ const ChartInteractivity = () => {
   return (
     <section className="text-center my-8">
       <h2 className="text-2xl font-semibold mb-4">Exploring Variables</h2>
-      <p className="text-lg">
-        <ul>
+      <p className="text-lg text-left px-6">
+        <ul className="list-disc ">
           <li>
-            Year No: This column represents the specific year for which
-            temperature anomalies are recorded, ranging from 1880 to 2020.
-            Temperature Anomaly (C): Similar to the "Smoothing" column, this
-            represents the temperature anomaly but explicitly states that the
-            values are in degrees Celsius.
+            <strong> Year No: </strong> This column represents the specific year
+            for which temperature anomalies are recorded, ranging from 1880 to
+            2020. Temperature Anomaly (C): Similar to the "Smoothing" column,
+            this represents the temperature anomaly but explicitly states that
+            the values are in degrees Celsius.
           </li>
           <li>
-            Temperature Anomaly (C): Similar to the "Smoothing" column, this
-            represents the temperature anomaly but explicitly states that the
-            values are in degrees Celsius.
+            <strong>Temperature Anomaly (C): </strong>Similar to the "Smoothing"
+            column, this represents the temperature anomaly but explicitly
+            states that the values are in degrees Celsius.
           </li>
         </ul>
       </p>

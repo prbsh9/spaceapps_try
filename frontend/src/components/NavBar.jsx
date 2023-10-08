@@ -53,6 +53,7 @@ function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
+            href={"/"}
             variant="h6"
             noWrap
             component="a"
