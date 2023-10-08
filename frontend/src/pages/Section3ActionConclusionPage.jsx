@@ -8,7 +8,7 @@ const Section3 = () => {
   return (
     <div className="bg-white max-w-4xl p-6 rounded-lg shadow-md">
       <h1 className="text-2xl font-semibold mb-4">
-        Section 3: Implications, Call to Action, and Conclusion
+        Section 4: Implications, Call to Action, and Conclusion
       </h1>
       <p className="text-gray-700 mb-4">
         In this section, we will explore the implications of climate change and

@@ -10,7 +10,15 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-const pages = ["Home", "Problem", "Solution", "Charts"];
+const pages = [
+  "Home",
+  "Water Paths",
+  "Problem",
+  "Study and Analysis",
+  "Charts",
+  "Fitting",
+  "Mathematical Model",
+];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -27,8 +35,16 @@ function NavBar() {
     const clickedText = event.target.innerText.toLowerCase();
     if (["home"].includes(clickedText)) {
       window.location.href = "/";
-    } else if (["charts", "problem", "solution"].includes(clickedText)) {
+    } else if (["problem", "fitting"].includes(clickedText)) {
       window.location.href = `/${clickedText}`;
+    } else if (["water paths"].includes(clickedText)) {
+      window.location.href = "/climate_and_water_paths";
+    } else if (["study and analysis"].includes(clickedText)) {
+      window.location.href = "/data_analysis";
+    } else if (["charts"].includes(clickedText)) {
+      window.location.href = "/charts/ocean";
+    } else if (["mathematical model"].includes(clickedText)) {
+      window.location.href = "/models";
     }
   };
 
@@ -101,7 +117,7 @@ function NavBar() {
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 4,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",

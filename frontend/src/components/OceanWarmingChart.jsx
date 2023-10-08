@@ -13,11 +13,14 @@ const OceanWarmingChart = () => {
     <div className="container mx-auto p-4">
       {/* Introduction */}
       <section className="text-center mb-8">
-        <h1 className="text-3xl font-semibold mb-4">Ocean Warming Chart</h1>
+        <h1 className="text-3xl font-semibold mb-4">
+          {" "}
+          Global Ocean Heat Content Increase (1955-2022)
+        </h1>
         <p className="text-lg">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nisi
-          eligendi nihil facilis autem sed placeat error eveniet veritatis? Quam
-          fuga.
+          The chart displays the increase in global ocean heat content since
+          modern recordkeeping began in 1955. This increase is a significant
+          indicator of global warming.
         </p>
       </section>
 

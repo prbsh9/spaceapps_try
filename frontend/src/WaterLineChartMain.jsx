@@ -47,7 +47,6 @@ export default function WaterLineChartMain() {
       <WaterAvailabilityChart />
       <ChartExplanation />
       <ChartInteractivity />
-      <Conclusion />
     </div>
   );
 }

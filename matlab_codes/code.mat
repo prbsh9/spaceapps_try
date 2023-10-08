@@ -1,0 +1,82 @@
+classdef nai < matlab.apps.AppBase
+% Properties that correspond to app components
+properties (Access = public)
+UIFigure matlab.ui.Figure
+Lamp matlab.ui.control.Lamp
+TemperatureIncreaseEditField matlab.ui.control.NumericEditField
+TemperatureIncreaseLabel matlab.ui.control.Label
+AnalyzeButton matlab.ui.control.Button
+UIAxes matlab.ui.control.UIAxes
+end
+% Callbacks that handle component events
+methods (Access = private)
+% Button pushed function: AnalyzeButton
+function AnalyzeButtonPushed(app, event)
+x=app.TemperatureIncreaseEditField.Value;
+t=0:0.1:5;
+z=(((1+(7.1*x/100)).^t)-1);
+y=(((1+(7.1*x/100)).^5)-1);
+plot(app.UIAxes,t,z);
+xlabel(app.UIAxes,"Time Period");
+ylabel(app.UIAxes,"Increase In Water Level");
+if y<0.10, app.Lamp.Color='g';
+end
+if y>=0.10 && y<=0.30, app.Lamp.Color='y';
+end
+if y>0.30, app.Lamp.Color='r';
+end
+end
+end
+% Component initialization
+methods (Access = private)
+% Create UIFigure and components
+function createComponents(app)
+% Create UIFigure and hide until all components are created
+app.UIFigure = uifigure('Visible', 'off');
+app.UIFigure.Position = [100 100 640 480];
+app.UIFigure.Name = 'MATLAB App';
+% Create UIAxes
+app.UIAxes = uiaxes(app.UIFigure);
+title(app.UIAxes, 'Analysis of increase of earth''s temp on ocean level')
+zlabel(app.UIAxes, 'Z')
+app.UIAxes.Position = [27 91 594 374];
+% Create AnalyzeButton
+app.AnalyzeButton = uibutton(app.UIFigure, 'push');
+app.AnalyzeButton.ButtonPushedFcn = createCallbackFcn(app, @AnalyzeButtonPushed, true);
+app.AnalyzeButton.Position = [485 55 100 23];
+app.AnalyzeButton.Text = 'Analyze';
+% Create TemperatureIncreaseLabel
+app.TemperatureIncreaseLabel = uilabel(app.UIFigure);
+app.TemperatureIncreaseLabel.HorizontalAlignment = 'right';
+app.TemperatureIncreaseLabel.Position = [109 47 72 30];
+app.TemperatureIncreaseLabel.Text = {'Temperature'; ' Increase '};
+% Create TemperatureIncreaseEditField
+app.TemperatureIncreaseEditField = uieditfield(app.UIFigure, 'numeric');
+app.TemperatureIncreaseEditField.Position = [196 55 10 22];
+% Create Lamp
+app.Lamp = uilamp(app.UIFigure);
+app.Lamp.Position = [314 21 20 20];
+app.Lamp.Color = [0.902 0.902 0.902];
+% Show the figure after all components are created
+app.UIFigure.Visible = 'on';
+end
+end
+% App creation and deletion
+methods (Access = public)
+% Construct app
+function app = nai
+% Create UIFigure and components
+createComponents(app)
+% Register the app with App Designer
+registerApp(app, app.UIFigure)
+if nargout == 0
+clear app
+end
+end
+% Code that executes before app deletion
+function delete(app)
+% Delete UIFigure when app is deleted
+delete(app.UIFigure)
+end
+end
+end

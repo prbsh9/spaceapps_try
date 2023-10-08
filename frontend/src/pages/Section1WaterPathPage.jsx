@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 
 const Section1WaterPathPage = () => {
-  const nextSectionLink = "/charts";
+  const nextSectionLink = "/problem";
   return (
     <div className="max-w-4xl">
       <div className="bg-white p-6 rounded-lg shadow-md">
@@ -61,47 +61,55 @@ const Section1WaterPathPage = () => {
           <h2 className="text-2xl font-semibold mb-2">
             An Overview to Water Cycle Process in Earth:
           </h2>
-          <p>
-            The complete cycle of water on earth is quite an interesting
-            process. The perpetual process of rain which might seem instinctive
-            to many, has a number of processes to go through.
-          </p>
+          <div className="items-center flex flex-col justify-center">
+            <img
+              className="my-7"
+              src={process.env.PUBLIC_URL + "/water_cycle.jpg"}
+              alt="Global Warming"
+            />
+            <p>
+              The complete cycle of water on earth is quite an interesting
+              process. The perpetual process of rain which might seem
+              instinctive to many, has a number of processes to go through.
+            </p>
 
-          <p>
-            Sea water (inclusive of ocean) is the main water source in the
-            planet, however, due to the presence of high amounts of salt
-            concentration in water, It isn’t drinkable. In fact, the ocean, the
-            largest source of water, is the end point of all the water resources
-            like rivers. Only the fresh water available through lakes, rivers
-            and glaciers which contain acceptable levels of salt suitable for
-            drinking. Even though almost 70% of earth is made up of water, only
-            a small amount(0.01) of water is suitable for drinking.
-          </p>
-          <p>
-            The sun rays falling in the larger water surfaces cause the water in
-            oceans to evaporate. Due to high specific heat capacity of water,
-            water takes much more time to heat than the land mass. This means
-            that the air above the land heats up faster than that of air and
-            rises up. This creates a vacuum space above the land. To compensate
-            for this vacuum, the water vapor filled with water from the ocean
-            moves towards the land in the form of clouds by the action of wind.
-            When these clouds rise higher, they tend to cool and the separate
-            water molecules (in the form of air) bind together to form larger
-            and heavier molecules in liquid states. This process is called
-            condensation. At the end, when air molecules become heavy enough
-            that they can withstand the upthrust of the clouds, water falls down
-            in the form of rain. This rain goes to the rivers, falls in the soil
-            and other water resources.
-          </p>
-          <p>
-            The water that falls deposits in the rivers and eventually goes to
-            the ocean and in this way the water cycle of the earth is
-            maintained.{" "}
-          </p>
+            <p>
+              Sea water (inclusive of ocean) is the main water source in the
+              planet, however, due to the presence of high amounts of salt
+              concentration in water, It isn’t drinkable. In fact, the ocean,
+              the largest source of water, is the end point of all the water
+              resources like rivers. Only the fresh water available through
+              lakes, rivers and glaciers which contain acceptable levels of salt
+              suitable for drinking. Even though almost 70% of earth is made up
+              of water, only a small amount(0.01) of water is suitable for
+              drinking.
+            </p>
+            <p>
+              The sun rays falling in the larger water surfaces cause the water
+              in oceans to evaporate. Due to high specific heat capacity of
+              water, water takes much more time to heat than the land mass. This
+              means that the air above the land heats up faster than that of air
+              and rises up. This creates a vacuum space above the land. To
+              compensate for this vacuum, the water vapor filled with water from
+              the ocean moves towards the land in the form of clouds by the
+              action of wind. When these clouds rise higher, they tend to cool
+              and the separate water molecules (in the form of air) bind
+              together to form larger and heavier molecules in liquid states.
+              This process is called condensation. At the end, when air
+              molecules become heavy enough that they can withstand the upthrust
+              of the clouds, water falls down in the form of rain. This rain
+              goes to the rivers, falls in the soil and other water resources.
+            </p>
+            <p>
+              The water that falls deposits in the rivers and eventually goes to
+              the ocean and in this way the water cycle of the earth is
+              maintained.{" "}
+            </p>
+          </div>
         </section>
 
         {/* Conclusion */}
-        <section>
+        {/* <section>
           <h2 className="text-2xl font-semibold mb-2">Conclusion</h2>
           <p>
             In this section, we have introduced the concepts of climate change
@@ -119,8 +127,8 @@ const Section1WaterPathPage = () => {
             However, due to various factors, there has been a substantial change
             in the freshwater distribution pattern of earth.
           </p>
-          <Navigation nextSectionLink={nextSectionLink} />
-        </section>
+        </section> */}
+        <Navigation nextSectionLink={nextSectionLink} />
       </div>
     </div>
   );

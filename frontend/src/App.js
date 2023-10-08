@@ -10,9 +10,13 @@ import InitialFreshWaterPage from "./pages/InitialFreshWaterPage";
 import OceanWarmingPage from "./pages/OceanWarmingPage";
 import GlobalWarmingPage from "./pages/GlobalWarmingPage";
 import HemisphereChartPage from "./pages/HemisphereChartPage";
-import ChartsMainPage from "./pages/Section2ChartsMainPage";
+import ChartsMainPage from "./pages/ProblemsMainPage";
 import Section3 from "./pages/Section3ActionConclusionPage";
 import Section1WaterPathPage from "./pages/Section1WaterPathPage";
+import DataAnalysisChartsPage from "./pages/DataAnalysisChartsPage";
+import ProblemsMainPage from "./pages/ProblemsMainPage";
+import FittingPage from "./pages/FittingPage";
+import MathematicalModelPage from "./pages/MathematicalModelPage";
 
 const darkTheme = createTheme({
   palette: {
@@ -40,16 +44,15 @@ export default function App() {
               path="/climate_and_water_paths"
               element={<Section1WaterPathPage />}
             />
-            <Route path="/charts" element={<ChartsMainPage />} />
+            <Route path="/problem" element={<ProblemsMainPage />} />
+            <Route path="/data_analysis" element={<DataAnalysisChartsPage />} />
             <Route path="/charts/ocean" element={<OceanWarmingPage />} />
             <Route path="/charts/global" element={<GlobalWarmingPage />} />
             <Route path="/charts/water" element={<InitialFreshWater />} />
-            <Route
-              path="/charts/hemisphere"
-              element={<HemisphereChartPage />}
-            />
-            action_and_implications
+
             <Route path="/section3" element={<Section3 />} />
+            <Route path="/fitting" element={<FittingPage />} />
+            <Route path="/models" element={<MathematicalModelPage />} />
           </Routes>
         </main>
       </BrowserRouter>

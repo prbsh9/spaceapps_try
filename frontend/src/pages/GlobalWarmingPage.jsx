@@ -4,30 +4,28 @@ import OceanWarmingChart from "../components/OceanWarmingChart";
 import Navigation from "../components/Navigation";
 import GlobalWarmingChart from "../components/GlobalWarmingChart";
 
-const Conclusion = () => {
-  const nextSectionLink = "/section3";
-
-  return (
-    <section className="text-center my-8">
-      <h2 className="text-2xl font-semibold mb-4">Conclusion and Takeaways</h2>
-      <p className="text-lg">
-        Climate change affects the availability of freshwater resources. As
-        temperatures rise and precipitation patterns change, understanding these
-        variables is crucial. It's our responsibility to protect and manage this
-        vital resource for future generations.
-      </p>
-    </section>
-  );
-};
-
 const ChartExplanation = () => {
   return (
     <section className="text-center my-8">
       <h2 className="text-2xl font-semibold mb-4">Understanding the Chart</h2>
       <p className="text-lg">
-        In the chart below, you can see how freshwater availability changes over
-        time. The x-axis represents years, and the y-axis represents freshwater
-        availability in cubic kilometers.
+        <ul className="flex flex-col gap-2 text-justify">
+          <li>
+            The temperature anomaly is a measure of how much the global surface
+            temperature deviates from this reference period.
+          </li>
+          <li>
+            Each data point on the chart represents a specific year, starting
+            from 1880 up to 2020, and shows the temperature anomaly for that
+            year in degrees Celsius.
+          </li>
+          <li>
+            Notably, the year 2020 statistically tied with 2016 as the hottest
+            year on record since recordkeeping began in 1880, as reported by
+            NASA's Goddard Institute for Space Studies (GISS).
+          </li>
+          <li></li>
+        </ul>
       </p>
     </section>
   );
@@ -38,10 +36,20 @@ const ChartInteractivity = () => {
     <section className="text-center my-8">
       <h2 className="text-2xl font-semibold mb-4">Exploring Variables</h2>
       <p className="text-lg">
-        Hover over data points on the chart to see specific values for each
-        year. Temperature and precipitation play key roles in determining
-        freshwater availability. Understanding these variables is essential to
-        grasp the impact of climate change.
+        <ul>
+          <li>
+            Year No: This column represents the specific year for which
+            temperature anomalies are recorded, ranging from 1880 to 2020.
+            Temperature Anomaly (C): Similar to the "Smoothing" column, this
+            represents the temperature anomaly but explicitly states that the
+            values are in degrees Celsius.
+          </li>
+          <li>
+            Temperature Anomaly (C): Similar to the "Smoothing" column, this
+            represents the temperature anomaly but explicitly states that the
+            values are in degrees Celsius.
+          </li>
+        </ul>
       </p>
     </section>
   );
@@ -58,7 +66,6 @@ export default function GlobalWarmingPage() {
             <GlobalWarmingChart />
             <ChartExplanation />
             <ChartInteractivity />
-            <Conclusion />
             <Navigation nextSectionLink={nextSectionLink} />
           </div>
         </main>
