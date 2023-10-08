@@ -4,6 +4,7 @@ import { Line } from "react-chartjs-2";
 const WaterAvailabilityChart = () => {
   // Dummy data for temperature, precipitation, and freshwater availability
   const [data, setData] = useState({ labels: [], datasets: [] });
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:8000/api/waterdata/")
@@ -35,6 +36,10 @@ const WaterAvailabilityChart = () => {
             },
           ],
         });
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setError(error.message);
       });
   }, []);
 
@@ -64,6 +69,13 @@ const WaterAvailabilityChart = () => {
     },
   };
 
+  if (error) {
+    return (
+      <div className="container mx-auto p-4">
+        <p className="text-red-500">{`Make sure the Django server is on: ${error}`}</p>
+      </div>
+    );
+  }
   return (
     <div className="container mx-auto p-4">
       {/* Introduction */}
@@ -83,6 +95,10 @@ const WaterAvailabilityChart = () => {
         </h2>
 
         <Line data={data} options={options} />
+        <p>
+          *Note: This is from mock data got through Django API which simulates
+          reality as per other graphs and sources
+        </p>
       </section>
     </div>
   );

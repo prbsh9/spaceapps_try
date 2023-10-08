@@ -24,13 +24,13 @@ const GlobalWarmingChart = () => {
 
       <section>
         <h2 className="text-2xl font-semibold mb-4">Ocean Warming Over Time</h2>
-
         {/* <Line data={data} options={options} /> */}
         {/* <img src={"ocean_warming_over_time.png"} alt="Ocean Warming Chart" /> */}
         <img
           src={process.env.PUBLIC_URL + "/global_warming.png"}
           alt="Global Warming"
         />
+        *Note: The chart above is through data of climate.nasa.gov
       </section>
     </div>
   );

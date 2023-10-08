@@ -51,7 +51,7 @@ export default function NavigateToPages() {
                   to="/charts/water"
                   className="text-blue-500 hover:underline"
                 >
-                  Chart 3: Heat Content Comparison
+                  Chart 3: Understanding Water Availability
                 </Link>
               </li>
             </ul>
