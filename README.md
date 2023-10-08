@@ -35,6 +35,12 @@
 - **python_codes:** This contains all the codes for the plotting different variables, fitting the linear regression and so on. This is done on .ipynb file
 - **matlab_codes:** Folder to the matlab codes.
 
+## Important Information:
+- **Python Use**: Used to plot different models and linear equation. One graph is made using Chart.js while other taken through the data analysis plots from the ipynb files.
+- **Sources**: Shared through the spaceapps portal
+  
+
+
 ## Installation
 
 1. Clone the repository:
