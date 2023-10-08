@@ -1,34 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 
 const WaterAvailabilityChart = () => {
   // Dummy data for temperature, precipitation, and freshwater availability
-  const [data, setData] = useState({
-    labels: ["2017", "2018", "2019", "2020", "2021", "2022"],
-    datasets: [
-      {
-        label: "Temperature (°C)",
-        borderColor: "rgba(255, 99, 132, 1)",
-        backgroundColor: "rgba(255, 99, 132, 0.3)",
-        data: [10, 12, 15, 18, 20, 22],
-        yAxisID: "y-axis-1",
-      },
-      {
-        label: "Precipitation (mm)",
-        borderColor: "rgba(75, 192, 192, 1)",
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        data: [30, 28, 25, 20, 15, 10],
-        yAxisID: "y-axis-2",
-      },
-      {
-        label: "Freshwater Availability",
-        borderColor: "rgba(54, 162, 235, 1)",
-        backgroundColor: "rgba(54, 162, 235, 0.2)",
-        data: [80, 85, 78, 72, 70, 68],
-        yAxisID: "y-axis-1",
-      },
-    ],
-  });
+  const [data, setData] = useState({ labels: [], datasets: [] });
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/waterdata/")
+      .then((response) => response.json())
+      .then((data) => {
+        setData({
+          labels: data.map((item) => item.year),
+          datasets: [
+            {
+              label: "Temperature (°C)",
+              borderColor: "rgba(255, 99, 132, 1)",
+              backgroundColor: "rgba(255, 99, 132, 0.3)",
+              data: data.map((item) => item.temperature),
+              yAxisID: "y-axis-1",
+            },
+            {
+              label: "Precipitation (mm)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              data: data.map((item) => item.precipitation),
+              yAxisID: "y-axis-2",
+            },
+            {
+              label: "Freshwater Availability",
+              borderColor: "rgba(54, 162, 235, 1)",
+              backgroundColor: "rgba(54, 162, 235, 0.2)",
+              data: data.map((item) => item.freshwater_availability),
+              yAxisID: "y-axis-1",
+            },
+          ],
+        });
+      });
+  }, []);
 
   // Configuration options for the chart
   const options = {
